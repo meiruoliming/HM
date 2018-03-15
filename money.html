@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>会员中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript"  src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript"  src="js/resetFontsize.js"></script>
+    <script type="text/javascript"  src="js/common.js"></script>
+    <link href="css/base.css"  rel="stylesheet"/>
+    <link href="css/common.css"  rel="stylesheet"/>
+    <link href="css/money.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <img src="images/top_nav_back.png" alt="华麦律师" class="back" >
+      <h2>收入</h2>
+    </div>
+    <div class="content">
+      <div class="all-money">
+        <p class="other-money">未结余额(元)</p>
+        <h2>0.00</h2>
+        <a href="javascript:void(0)" class="get-money">提现</a>
+      </div>
+      <div class="money-ul">
+        <ul>
+          <li>
+            <h3>回答收入</h3>
+            <p class="answer-money">0.00</p>
+          </li>
+          <li>
+            <h3>提问收入</h3>
+            <p class="answer-money">0.00</p>
+          </li>
+          <li>
+            <h3>红包收入</h3>
+            <p class="answer-money">0.00</p>
+          </li>
+          <li>
+            <h3>赞赏收入</h3>
+            <p class="answer-money">0.00</p>
+          </li>
+          <li>
+            <h3>圈子收入</h3>
+            <p class="answer-money">0.00</p>
+          </li>
+          <li>
+            <h3>内容收入</h3>
+            <p class="answer-money">0.00</p>
+          </li>
+          <li>
+            <h3>约聊收入</h3>
+            <p class="answer-money">0.00</p>
+          </li>
+        </ul>
+      </div>
+      <div class="coupon-money">
+        <span>优惠劵</span>
+        <img src="images/youhuiquan.png" alt="华麦律师" class="left-icon">
+
+         <img src="images/icon06.png" alt="华麦律师" class="right-icon"/>
+          <span class="colorp"><em class="num">0</em>张</span>
+      </div>
+    </div>
+    <div class="fd"></div>
+  </div>
+</body>
+<script>
+  $(".back").click(function(){
+    window.history.back(-1);
+  });
+</script>
