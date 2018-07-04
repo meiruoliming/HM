@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <title>行家认证</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript"  src="js/resetFontsize.js"></script>
+    <script type="text/javascript"  src="js/jquery-2.1.3.min.js"></script>
+    <link href="css/base.css"  rel="stylesheet"/>
+    <link href="css/common.css"  rel="stylesheet"/>
+    <link href="css/expert-certify-tab.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 选择领域-->
+        <div class="top">
+          <img src="images/top_nav_back.png" alt="华麦律师" class="back">
+          <h2>选择领域</h2>
+          <span class="right-word colorspan" id="saveBtn" onclick="saveBtn()">保存</span>
+        </div>
+        <!-- 主要内容 -->
+        <div class="content">
+          <div class="tab-head">
+            <span>选择标签</span>
+            <span class="numspan"><em id="tabNum">0</em>/3</span>
+          </div>
+          <!-- 行业标签 -->
+          <div class="selected-tab">
+            <ul class="selected-lists">
+            <!--   <li class="selected-item">律师1<img src="images/close-img.png" alt="华麦律师" class="closeImg"></li>
+              <li class="selected-item">律师2<img src="images/close-img.png" alt="华麦律师" class="closeImg"></li>
+              <li class="selected-item">律师3<img src="images/close-img.png" alt="华麦律师" class="closeImg"></li>
+              <li class="selected-item">律师4<img src="images/close-img.png" alt="华麦律师" class="closeImg"></li> -->
+            </ul>
+          </div>
+        <!-- 所有标签选项 -->
+          <div class="all-tab">
+            <h4>请选择您擅长的领域</h4>
+            <ul class="all-lists">
+              <li class="all-item" id="tab1">律师1</li>
+              <li class="all-item" id="tab2">律师2</li>
+              <li class="all-item" id="tab3">律师3</li>
+              <li class="all-item" id="tab4">律师4</li>
+              <li class="all-item" id="tab5" onclick="otherTab(100)">其它</li>
+            </ul>
+        </div>
+          <!--自定义标签-可输入-->
+        <div class="custom-tab active">
+          <input type="text" id="customTab" class="costomtab" placeholder="请输入自定义标签内容" value="" />
+          <a id="customSure" class="customSure">确定</a>
+        </div>
+      </div>
+   </div>
+</body>
+  <script type="text/javascript"  src="js/common.js"></script>
+    <script type="text/javascript"  src="js/expert-certify-tab.js"></script>
+</html>

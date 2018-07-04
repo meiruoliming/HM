@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的消息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript"  src="js/resetFontsize.js"></script>
+    <script type="text/javascript"  src="js/jquery-2.1.3.min.js"></script>
+    <link href="css/base.css"  rel="stylesheet"/>
+    <link href="css/common.css"  rel="stylesheet"/>
+    <link href="css/question.css" rel="stylesheet">
+    <link href="css/pic.css"  rel="stylesheet"/>
+    <link href="css/upimg.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- 提问问题 -->
+    <div class="question" >
+     <div class="top">
+      <img src="images/top_nav_back.png" alt="华麦律师" class="back">
+        <h2>提问</h2>
+    </div>
+    <div class="content">
+        <!-- 提问问题 -->
+         <div class="question-box">
+         <div class="question-text">
+             <textarea class="qs-main"  placeholder="请详细描述您的问题，包括区块链，跨境并购与投资，上市公司的并购重组。如果超过48小时没有专家未回答，支付费用会原路退回给您。"></textarea>
+             <span class="word"><i class="num" id="wordNum">0</i>/1000</span>
+         </div>
+         <!-- 上传图片 -->
+         <div class="question-img">
+           <div class="z_photo upimg-div clear">
+                   <!--<section class="up-section fl">
+                      <span class="up-span"></span>
+                      <img src="/img/buyerCenter/a7.png" class="close-upimg">
+                      <img src="/img/buyerCenter/3c.png" class="type-upimg" alt="添加标签">
+                      <img src="/img/test2.jpg" class="up-img">
+                        <p class="img-namep"></p>
+                        <input id="taglocation" name="taglocation" value="" type="hidden">
+                        <input id="tags" name="tags" value="" type="hidden">
+                    </section>-->
+                     <section class="z_file fl">
+                      <img src="images/a11.png" class="add-img">
+                      <input type="file" name="file" id="file" class="file" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple="">
+                     </section>
+             </div>
+       </div>
+     </div>
+       <!-- 匿名提问 -->
+      <div class="question-select">
+        <div class="appui_cells">
+          <div class="appui_cell" id="anonymitySwitch">
+            <div class="appui_cell__bd">
+              <p class="fc-black">匿名提问</p>
+            </div>
+            <span class="appui_cell__switch"><i class="bg-white"></i></span>
+          </div>
+          <!-- 选择地区 -->
+         <!--   <div class="appui_cell ">
+                <div class="appui_cell__bd">
+                     <p class="fc-black">问题针对地区</p>
+                 </div>
+                  <i class="appui_cell__go"><img src="images/appui_cell_rightarrow.png"></i>
+                <div id="selectArea" class="appui_cell__ft" data-value="">
+                     <p class="fc-greyaaa">请选择问题针对地区</p>
+                 </div>
+                  </div> -->
+                  <!-- 选择问题分类 -->
+            <div class="appui_cell">
+                  <div class="appui_cell__bd">
+                        <p class="fc-black">问题所属分类</p>
+                   </div>  
+                    <i class="appui_cell__go"><img src="images/appui_cell_rightarrow.png"></i>
+                        <div id="selectType" class="appui_cell__ft" data-value="" data-name="">
+                            <p class="fc-greyaaa">请选择问题所属分类</p>
+                       </div>
+                    </div>
+                </div>
+           </div>
+      </div>
+      <div class="publish"><a href="javascript:void(0)" class="publish-btn" id="publishBtn">确认发布</a></div>
+    </div>
+    <!-- 选择类型 -->
+   <div class="selectType" style="display:none">
+       <div class="top">
+         <img src="images/top_nav_back.png" alt="华麦律师" class="goback" >
+          <h2>分类选择</h2>
+          <span class="right-word" style="pointer-events: auto;">确认</span>
+       </div>
+       <div id="selectTypeList" class="content">
+          <div class="type-data">
+            <em>最多选择 <strong>3</strong>项</em>
+          <!--   <span class="type-list" data-val="102">区块链</span>
+            <span class="type-list" data-val="103">资产证券化</span>
+            <span class="type-list" data-val="104">红筹</span> -->
+          </div>
+          <div class="type-tabs">
+           <ul>
+              <li data-selector="tab-all" class="hiddenli">
+                <a href="javascript:void(0);">
+               <span>全部</span></a>
+              </li>
+          </ul>
+    </div>
+    <div class="data-box data-type">
+      <div class="data-main">
+        <ul class="data-lists">
+          <li>
+            <a href="javascript:;" class="d-item" data-val="101" data-name="">趋势</a></li>
+          <li>
+            <a href="javascript:;" class="d-item" data-val="102" data-name="">区块链</a></li>
+          <li>
+            <a href="javascript:;" class="d-item " data-val="103" data-name="">资产证券化</a></li>
+          <li>
+            <a href="javascript:;" class="d-item " data-val="104" data-name="">红筹</a></li>
+          <li>
+            <a href="javascript:;" class="d-item" data-val="105" data-name="">跨境并购</a></li>
+          <li>
+            <a href="javascript:;" class="d-item" data-val="106" data-name="">上市公司并购重组</a></li>
+          <li>
+            <a href="javascript:;" class="d-item" data-val="107" data-name="">境内投资与并购</a></li>
+          <li>
+            <a href="javascript:;" class="d-item" data-val="109" data-name=""其他</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  <div class="mask">
+    <div class="mask-box"></div>
+    <div class="mask-content">
+      <div class="m-c-head colorspan"><strong>温馨提示</strong></div>
+      <div class="m-c-main">本次提问将使用优惠券抵扣，可抵扣专家团提问金199元。</div>
+      <div class="m-c-footer">
+        <a href="javascript:void(0);" class="colorspan colsebtn">知道了</a>
+      </div>
+     </div>
+   </div>
+</body>
+ <script type="text/javascript"  src="js/common.js"></script>
+<script type="text/javascript"  src="js/question.js"></script>
+<script type="text/javascript"  src="js/change.js"></script>
+<script type="text/javascript"  src="js/selectPic.js"></script>
+</html>

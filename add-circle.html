@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>加入圈子</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript"  src="js/resetFontsize.js"></script>
+    <script type="text/javascript"  src="js/jquery-2.1.3.min.js"></script>
+    <link href="css/base.css"  rel="stylesheet"/>
+    <link href="css/common.css"  rel="stylesheet"/>
+    <link href="css/focus-list.css"  rel="stylesheet"/>
+    <link href="css/add-circle.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+   <div class="add-circle">
+    <!-- 头部信息 -->
+        <div class="top">
+          <img src="images/top_nav_back.png" alt="华麦律师" class="back">
+          <h2>区块链法律研究中心</h2>
+        </div>
+        <div class="content">
+          <!-- 顶部背景图 -->
+             <div class="head">
+               <img src="images/circle_default.jpg" alt="华麦律师">
+               <div class="head-info">
+                   <span><img src="images/cricle-1.jpeg" alt="华麦律师"></span>
+                   <h4 class="circle-name">区块链法律研究中心</h4>
+                   <div class="circle-int"><span>华麦</span>于<span class="addtime">2017-8-15</span>创建</div>
+               </div>
+              </div>
+              <!-- 主体内容 -->
+              <div class="circle-info">
+                <!-- 圈子简介 -->
+                  <div class="info-int">
+                    <h4 class="int-title">圈子简介</h4>
+                    <div class="int-content">为应对区块链相关产业的迅猛发展，华麦设立了区块链法律研究中心，邀请境内外的顶尖法律专家和从业者，就区块链法律的理论与实践进行研究与探讨，为广大区块链的创业家、投资人、监管机构以及行业协会提供强有力的服务与支持，促进产业的良性和健康发展。</div>
+                  </div>
+                  <!-- 加入须知 -->
+                  <div class="info-add">
+                    <h4 class="add-title">加入须知</h4>
+                    <div class="add-content">
+                      <div class="add-content-money"><span ><img src="images/circle_join.png" alt="华麦律师" class="nav-img">费用：</span>
+                        <p class="rightp">￥100/年</p></div>
+                       <div class="add-content-note"><span><img src="images/circle_join.png" alt="华麦律师" class="nav-img">备注：</span>
+                        <p class="rightp">付费成功后，您可以在</span><span class="addtime">2018年04月11日至2019年04月11日</span>期间进入<span>华麦</span>的圈子，查看<span class="circle-name colorspan">区块链法律研究中心</span>的内容</p>
+                    </div>
+                  </div>
+                 </div>
+                  <!-- 其他信息 -->
+                  <div class="info-other">
+                     <ul class="other-list">
+                        <li class="list-item"> <span class="theme-num colorspan">200</span> 主题</li>
+                        <li class="list-item"> <span class="question-num colorspan">300</span> 问答</li>
+                          <li class="list-item"> <span class="member-num colorspan">500</span> 成员</li>
+                      </ul>
+                  </div>
+              </div>
+        <!-- 内容结束 -->
+        <!-- 发布内容 -->
+        <div class="publish-box">
+           <h3 class="publish-nav">最新发布</h3>
+           <div class="publish-content">
+             <!-- 关注列表开始 -->
+        <div class="focus-list">
+             <div class="f-l-head">
+                 <div class="f-l-left" onclick="updateMember(0)">
+                   <img src="images/no-avatar.png" alt="华麦律师" class="author-img" >
+                    <em><img src="images/v2.png" class="grade-img"></em>
+                   </div>
+                 <div class="f-l-center">
+                <span class="username">华麦</span>
+                <span class="identity">北京华麦法律咨询有限公司</span>
+              </div>
+                 <div class="f-l-right">
+                   <span><em class="publish">发表</em></span>
+                 </div>
+              </div>
+              <div class="f-l-main">
+                <h2 class="theme-name">证监会开出史上最大罚单！ 北八道这回还能霸道起来吗？</h2>
+                <p class="subtitle">厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。</p>
+                <div><img src="images/one.jpg" alt="华麦律师" class="list-img"></div>
+              </div>
+              <div class="f-l-bottom">
+                <div class="time">
+                  <span class="day">1天</span>
+                  <span class="reader"><i class="num">200</i>阅读</span>
+                </div>
+                <div class="static"> 
+                   <span class="up" onclick="up(this,1)">
+                    <img src="images/zan0_x1.png" alt="华麦律师" >
+                    <!-- <img src="images/zan_x1.png" ">-->
+                   <i class="up-num">200</i>
+                  </span>
+                    <span class="comment " onclick="comment(this,1)"><img src="images/back.png" alt="华麦律师"><i class="comment-num">200</i></span>
+                    <span class="showbar ak_on" onclick="showComment(this)"><img src="images/up_more.png" alt="华麦律师"></span>
+                </div>
+              </div>
+            <!-- 评论内容 -->
+            <div class="comment-main">
+                <div class="comment-list">
+                    <!--<label class="user">李默</label><i>：</i><span class="content">北京华麦</span>-->
+                </div>
+            </div>
+         </div>
+           </div>
+        </div>
+        <!-- 发布内容结束 -->
+        </div>
+        <!-- 底部加入圈子 -->
+        <div class="footer payBtn">
+             <span>￥666</span>加入圈子</a>
+        </div>
+    </div>
+    <!-- 加入圈子弹窗 -->
+     <div class="add-mask" style="display:none">
+      <div class="mask-content">
+              <h3 class="mask-head colorspan">温馨提示</h3>
+              <div class="mask-prompt">加入圈子可以查看全部内容</div>
+                  <div class="mask-btn">
+                       <a id="cancelBtn" class="cancelbtn">取消</a>
+                       <a id="confirmBtn" href="javascript:;" class="colorspan addbtn">现在加入</a>
+                 </div>
+              </div>
+      </div>
+</div>
+</body>
+<script>
+  $(".f-l-main").on("click",function(){
+    $(".add-mask").show();
+  })
+  $("#cancelBtn").on("click",function(){
+    $(".add-mask").hide();
+  });
+  $("#confirmBtn").on("click",function(){
+    $(".add-mask").hide();
+  });
+</script>
+  <script type="text/javascript"  src="js/common.js"></script>
+</html>

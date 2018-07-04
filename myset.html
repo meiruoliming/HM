@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <title>设置</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript"  src="js/resetFontsize.js"></script>
+    <script type="text/javascript"  src="js/jquery-2.1.3.min.js"></script>
+    <link href="css/base.css"  rel="stylesheet"/>
+    <link href="css/common.css"  rel="stylesheet"/>
+    <link href="css/myset.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部导航开始-->
+        <div class="top">
+          <img src="images/top_nav_back.png" alt="华麦律师" class="back">
+          <h2>设置</h2>
+          <!-- <span class="right-word colorspan" id="saveBtn">保存</span> -->
+        </div>
+        <!-- 主要内容 -->
+        <div class="content">
+          <!--我的设置-->
+          <div class="myset">
+            <!--  消息推送-->
+            <div class="set-lists">
+              <div class="set-item">
+                <div class="set-item-name">接收收益推送消息</div>
+                <div class="set-item-nav">
+                  <span class="authority-item-switch authority-item-switch-on">
+                      <i class="bg-white"></i></span>
+                 </div>
+              </div>
+          <!-- 绑定手机号 -->
+              <div class="set-item">
+                <div class="set-item-name">绑定手机号</div>
+                <div class="set-item-nav">
+                  <!-- 未绑定 -->
+                  <p class="iphonenav" id="safe" style="display:none;">未绑定 <span><img src="images/right-nav-blue.png" alt="华麦律师" class="img-nav"></span></p>
+                  <!--已绑定  -->
+                  <p class="iphonenav" id="safeNav" >
+                    <span><img src="images/safe_lock.png" alt="华麦律师" class="safe-img"></span>已绑定
+                    <span><img src="images/right-nav-blue.png" alt="华麦律师" class="img-nav"></span>
+                  </p>
+                 </div>
+              </div>
+          <!--修改密码-->
+              <div class="set-item" onclick="location='password-edit.html'">
+                <div class="set-item-name">修改密码</div>
+                <div class="set-item-nav">
+                    <span><img src="images/right-nav-blue.png" alt="华麦律师" class="img-nav"></span>
+                 </div>
+              </div>
+          <!-- 忘记密码 -->
+              <div class="set-item" onclick="location='user-password.html'">
+                <div class="set-item-name">忘记密码</div>
+                <div class="set-item-nav">
+                    <span><img src="images/right-nav-blue.png" alt="华麦律师" class="img-nav"></span>
+                 </div>
+              </div>
+            </div>
+      </div>
+      <!-- 关于我们 -->
+      <div class="stytem-set">
+        <!--  系统消息-->
+          <div class="set-lists">
+            <div class="set-item" onclick="location='about-us.html'">
+              <div class="set-item-name">关于我们</div>
+                <div class="set-item-nav">
+                    <span><img src="images/right-nav-blue.png" alt="华麦律师" class="img-nav"></span>
+                 </div>
+            </div>
+          <!--  意见反馈-->
+            <div class="set-item" onclick="location='feedback.html'">
+              <div class="set-item-name">意见反馈</div>
+                <div class="set-item-nav">
+                    <span><img src="images/right-nav-blue.png" alt="华麦律师" class="img-nav"></span>
+                 </div>
+            </div> 
+          <!--  客服中心-->
+            <div class="set-item">
+              <div class="set-item-name">客服中心</div>
+                <div class="set-item-nav">
+                    <span>(+86)01-68588580</span>
+                 </div>
+            </div>
+          <!--  客服微信-->
+            <div class="set-item">
+              <div class="set-item-name">微信</div>
+                <div class="set-item-nav">
+                    <span>huamai1</span>
+                 </div>
+            </div> 
+            <!--结束 -->
+      </div>
+     </div>
+      <!-- 退出社区  重新登录-->
+      <div class="logout prompt" onclick="window.location.href='login.html'">退出社区</div>
+   </div>
+ </div>
+</body>
+    <script type="text/javascript"  src="js/common.js"></script>
+    <script type="text/javascript"  src="js/myset.js"></script>
+</html>

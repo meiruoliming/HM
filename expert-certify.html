@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>行家认证</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript"  src="js/resetFontsize.js"></script>
+    <script type="text/javascript"  src="js/jquery-2.1.3.min.js"></script>
+    <link href="css/base.css"  rel="stylesheet"/>
+    <link href="css/common.css"  rel="stylesheet"/>
+    <link href="css/expert-certify.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部导航-->
+        <div class="top">
+            <img src="images/top_nav_back.png" alt="华麦律师" class="back">
+            <h2>行家认证</h2>
+        </div>
+            <!-- 主要内容 -->
+        <div class="content">
+        	<div class="expert-info">
+        		<!-- 头像+用户名 -->
+                <div class="expert-info-item head">
+                	<span class="imgspan"><img src="images/no-avatar.png" alt="华麦律师"></span>
+                	<span class="expert-info-name">华麦</span>	
+                </div>
+                <!-- 头衔 -->
+                <div class="expert-info-item title">
+                	<h4>头衔</h4>
+                	<textarea class="expertTitle" placeholder="输入职位描述或者在企职位" row="4" id="expertTitle"></textarea>
+                	<span class="word-num"><em id="wordNum">0</em>/20</span>
+                </div>
+                <!-- 领域 -->
+                 <div class="expert-info-item field" onclick="location='expert-certify-tab.html'">
+                	<h4>领域</h4>
+                	<div class="tab">(最多可选5个标签)</div>
+                	<span class="word-num"><em id="tabNum">0</em>/5</span>
+                </div>
+                <!-- 简介 -->
+                <div class="expert-info-item intl">
+                	<h4>简介</h4>
+                	<textarea class="expertIntl" placeholder="输入您的个人简介" row="4" id="expertIntl"></textarea>
+                	<span class="word-num"><em id="intlNum">0</em>/50</span>
+                </div>
+                <!-- 申请成为专家 -->
+                <div class="expert-info-item Certify">
+                	<h4>申请专家认证<span class="prompt">(专家文章更容易通过审核)</span></h4>
+                	<!-- 未上传 -->
+                	<div class="upadate-img" id="noupdateImg">
+                        <p>
+							<span class="bg-border"></span>
+							<span class="bg-border"></span>
+						</p>
+						<p class="update-prompt">上传名片</p>
+						<input class="updateimg" accept="image/*" id="cardUpload1" type="file" name="imgUpdate">
+                	</div>
+                	<!-- 已上传 -->
+                	<div class="update-img update-img-success" style="display:none">
+                		<img src="images/circle_default.jpg" alt="华麦律师"/>
+                		<input class="updateimg" accept="image/*" id="cardUpload2" type="file" name="imgUpdate">
+                	</div>
+                	<span class="word-num"><em id="intlNum">0</em>/20</span>
+                </div>
+                <!-- 权限设置 -->
+                 <div class="expert-info-item authority">
+                	<!-- <h4>权限</h4> -->
+                	<!-- 收费-->
+                	<div class="authority-item">
+                		<span class="authority-item-name">向我提问需要支付</span>
+                		<input class="authority-item-money" value="" name="money" id="askMoney" placeholder="￥0-1000">
+                		<span class="authority-item-rule prompt" id="moneyRule">收费规则</span>
+                	</div>
+                	<!-- 免费接受免费追问-->
+                	<div class="authority-item">
+                		<span class="authority-item-name">接受免费追问</span>
+                		<span class="authority-item-switch authority-item-switch-on">
+                			<i class="bg-white"></i>
+                		</span>
+                		<span class="authority-item-rule prompt" id="questionRule">追问规则</span>
+                	</div>
+                	<!-- 接受优惠券提问-->
+                	<div class="authority-item">
+                		<span class="authority-item-name">接受优惠券提问</span>
+                        <span class="authority-item-switch">
+                			<i class="bg-white"></i>
+                		</span>
+                	</div>
+                </div>
+        	</div>
+        	<!-- 申请成为专家 -->
+        	<a href="javascript:void(0)" class="authority-certify-btn" onclick="submitBtn()">申请成为专家</a>
+            <p class="rule">
+            	<span class="input-span"><input type="checkbox" name="rule" class="rulebtn" checked>我已阅读并同意</span><span class="prompt">《华麦专家认证条例》</span></p>
+       </div>
+       <!-- 规则框 -->
+       <div class="rule-mask" style="display:none" id="Mask1">	
+         <!-- 提问收费规则 -->
+         <div class="rule-box">
+         	<div class="money-rule">
+                <h2>收费规则</h2>
+                <div class="rule-content">
+                	<p>若用户使用提问券提问，则该次回答收益不超过<span>10</span>元。</p>
+                </div>
+                <div class="rule-footer prompt konwBtn">知道了</div>
+         </div>
+         </div>
+       </div>
+        <div class="rule-mask" style="display:none" id="Mask2">	
+         <!--  提问收费规则结束-->
+          <!-- 追问规则 -->
+         <div class="rule-box">
+         	<div class="money-rule">
+                <h2>追问规则</h2>
+                <div class="rule-content">
+                	<p>您回答一个问题后，提问者可以向您免费“追问”。</p>
+            	    <p>开启免费追问，进一步增加您与提问者的交流机会，使问答体验更加完整。</p>
+                </div>
+                <div class="rule-footer prompt konwBtn">知道了</div>
+         </div>
+         </div>
+       </div>	
+   </div>
+</body>
+ <script type="text/javascript"  src="js/common.js"></script>
+ <script type="text/javascript"  src="js/expert-certify.js"></script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>追问</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript"  src="js/resetFontsize.js"></script>
+    <script type="text/javascript"  src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript"  src="js/common.js"></script>
+    <link href="css/base.css"  rel="stylesheet"/>
+    <link href="css/common.css"  rel="stylesheet"/>
+    <link href="css/question.css" rel="stylesheet">
+    <link href="css/pic.css"  rel="stylesheet"/>
+    <link href="css/upimg.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- 提问问题 -->
+    <div class="question queation-again" >
+     <div class="top">
+      <img src="images/top_nav_back.png" alt="华麦律师" class="back">
+        <h2>追问</h2>
+    </div>
+    <div class="content">
+        <!-- 提问问题 -->
+         <div class="question-box">
+         <div class="question-text">
+           <textarea class="qs-main" contenteditable="true" placeholder="请详细描述您的问题，包括区块链，跨境并购与投资，上市公司的并购重组。如果超过48小时没有专家未回答，支付费用会原路退回给您。"></textarea>
+            <span class="word"><i class="num" id="wordNum">0</i>/1000</span>
+         </div>
+          </div>
+    </div>
+  </div>
+  <div class="publish"><a href="javascript:void(0)" class="publish-btn">确认发布</a></div>
+</div>
+  
+</body>
+<script>
+  $(".back").click(function(){
+    window.history.back(-1);
+  });
+  // 字数输入限制
+$(".qs-main").on("input", function(){
+   $("#wordNum").text($(this).val().length);
+});
+</script>
+<script type="text/javascript"  src="js/question.js"></script>
+<script type="text/javascript"  src="js/change.js"></script>
+<script type="text/javascript"  src="js/selectPic.js"></script>
+</html>
+

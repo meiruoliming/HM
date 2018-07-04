@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>提问的详情页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript"  src="js/resetFontsize.js"></script>
+    <script type="text/javascript"  src="js/jquery-2.1.3.min.js"></script>
+    
+    <link href="css/base.css"  rel="stylesheet"/>
+    <link href="css/common.css"  rel="stylesheet"/>
+    <link href="css/question-detail.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- 文章信息 -->
+    <div class="question-detail">
+    <div class="top">
+      <img src="images/top_nav_back.png" alt="华麦律师" class="back"/>
+      <h2>问题详情</h2>
+      <span class="right-img share-btn">
+        <img src="images/share.png" alt="华麦律师" class="change-img" >
+      </span>
+    </div>
+    <div class="content">
+      <!-- 我的提问 -->
+      <!-- 问题开始 -->
+       <div class="m-question">
+         <div class="m-info">
+          <div class="m-info-left"><img class="m-info-img user" src="images/user_10.png" alt="华麦律师" onclick="updateMember(1)"/></div>
+           <p class="m-info-sourse question-source">来自<em class="username">北京华麦</em>的回答</p>
+           <a href="question-invite.html"><span class="m-info-btn colorspan m-info-right">邀请行家</span></a>
+         </div>
+         <div class="m-content">
+           <p>我想询问有关经济方面的法律问题。</p>
+         </div>
+         <div class="m-info-other">
+           <p class="m-info-relevence question-source">
+             <span>2018-04-04</span>
+             <span class="readNum"><em class="readnum">100</em>次阅读</span>
+           </p>
+         </div>
+       </div>
+       <!-- 问题结束 -->
+       <!-- 行家回答 -->
+       <!-- 回答开始 -->
+       <div class="e-answer">
+        <div class="answer-number">
+           <!-- 回答为0 -->
+          <span class="ansewer-num"><em class="answerCount">1</em>人回答</span>
+          <span class="callBack colorspan" style="display:none">撤回</span>
+          <!-- 有人回答 -->
+        </div>
+        <!-- 没人回答 -->
+         <div class="e-answer-none" style="display:none">
+           <img src="images/not_data.png">
+           <p class="no-answer">还没有其他人回答</p>
+         </div>
+         <!--有回答的列表 -->
+         <div class="e-answer-list">
+            <div class="e-answer-info">
+               <div class="m-info">
+                <div class="m-info-left">
+                  <img class="m-info-img" src="images/no-avatar.png" alt="华麦律师" onclick="updateMember(0)"/> 
+                  <em><img src="images/v2.png" class="grade-img"></em>
+                </div>
+                <p class="m-info-sourse question-source"><span  class="username">行家</span>｜<span class="title">北京华麦</span></p>
+                <span class="focus m-info-right" onclick="addFocus(this)" >关注</span>
+                   <span class="focus m-info-right active" onclick="RemoveFocus(this)">取关</span>
+             </div>
+             <div class="m-content">
+               <p>回答问题</p>
+             </div>
+             <div class="m-info-other f-l-bottom">
+                <span class="answer-price">价值26.00元</span>
+                <a href="question-again.html" class="colorspan">追问</a>
+                 <div class="static">
+                       <span class="shareBtn"><img src="images/share.png" alt="华麦律师" class="sharebtn">分享</span>
+                       <span class="up" onclick="up(this,1)">               
+                       <img src="images/zan0_x1.png" alt="华麦律师" >
+                        <!-- <img src="images/zan_x1.png" ">-->
+                       <i class="up-num">200</i>
+                       </span>
+                       <span class="comment" onclick="comment(this,1)"><img src="images/back.png" alt="华麦律师"><i class="replay-num">200</i></span>
+                       <span class="showbar ak_on" onclick="showComment(this)"><img src="images/up_more.png" alt="华麦律师"></span>
+                 </div>
+               </div>
+                <!-- 评论内容 -->
+                <div class="comment-main">
+                    <div class="comment-list">
+                        <!--<label class="user">李默</label><i>：</i><span class="content">北京华麦</span>-->
+                    </div>
+                </div>
+                <div class="comment-box active">
+                  <div class="comment-content" contenteditable="true"></div>
+                  <span class="comment-btn" onclick="comment(this)">评论</span>
+                </div>
+          </div>
+         </div>
+       </div>
+       <!-- 查看更多 -->
+         <a href="javascipt:void:0" class="more-answer" style="display:none">查看更多</a>
+        <!--  相关回答推荐-->
+          <div class="e-answer-other" style="display:none">
+            <h5>相关回答推荐</h5>
+            <ul class="e-answer-other-list">
+              <li>回答回答</li>
+            </ul>
+          </div>
+       </div>
+     <!-- 回答结束 -->
+  </div>
+  </div>
+ <!-- 分享提示框-->
+ <div class="share-prompt-box">
+   <div class="prompt-mask">
+    <div class="circle_share_box">
+       <img src="images/circle_share.png" alt="华麦律师"/>
+    </div>
+     <a href="javascript:void(0)" class="close-btn">
+       <img src="images/circle_share_btn.png" alt="华麦律师"/>
+     </a>
+   </div>
+ </div>
+</div>
+</body>
+</html>
+<script type="text/javascript"  src="js/common.js"></script>
+<script type="text/javascript"  src="js/question-detail.js"></script>

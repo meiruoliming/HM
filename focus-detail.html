@@ -7,58 +7,252 @@
     <script type="text/javascript"  src="js/resetFontsize.js"></script>
     <script type="text/javascript"  src="js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript"  src="js/common.js"></script>
+    <script type="text/javascript"  src="js/focus-detail.js"></script>
     <link href="css/base.css"  rel="stylesheet"/>
     <link href="css/common.css"  rel="stylesheet"/>
     <link href="css/focus-detail.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <div class="top">
+    <!-- 关注列表详情信息 -->
+    <div class="focus-detail">
+    <div class="head">
       <img src="images/top_nav_back.png" alt="华麦律师" class="back">
-      <h2>我的关注</h2>
+      <h2>详情</h2>
+      <span class="right-img" id="navbtn">
+        <img src="images/nav_icon_more1.png" alt="华麦律师" class="change-img" >
+      </span>
+       <div class="btn-box" id="actListId" style="display: none">
+          <a class="tag-btn " id="tagEdit" >标签</a>
+          <a class="img-btn " id="getSharePic" >生成图片</a>
+          <a class="del-btn " id="deleatID" >删除</a>
+          <a class="report-btn" id="report">举报</a>
+        </div>
     </div>
     <div class="content">
-      <div class="focus">
-        <div class="foucs-list">
-          <div class="f-l-head">
-             <a href="center.html">
-               <img src="images/no-avatar.png" alt="华麦律师" class="author-img" >
-                <em><img src="images/v2.png" class="grade-img"></em>
-             </a>
-              <div class="f-l-center">
-                <span class="username">华麦</span>
-                <span class="identity">北京华麦法律咨询有限公司</span>
-              </div>
-              <div class="f-l-right">
-               <span><em class="publish">发表</em></span>
-              </div>
-              <div class="main">
-                <h2 class="head">证监会开出史上最大罚单！ 北八道这回还能霸道起来吗？</h2>
-                <p class="subtitle">厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。</p>
-                <div><img src="images/one.jpg" alt="华麦律师" class="list-img"></div>
-              </div>
-              <div class="bottom">
-                <div class="time">
-
-                  <span class="day">1天</span>
-                  <span class="reader"><i class="num">200</i>阅读</span>
+        <!-- 关注详情-->
+        <div class="focus-content">
+            <!-- 文章题目 -->
+            <h2 class="content-head">证监会开出史上最大罚单！ 北八道这回还能霸道起来吗？</h2>
+            <!-- 作者信息 -->
+            <div class="author">
+                <div class="author-left" onclick="updateMember(0)" id="authorLeft">
+                    <img src="images/no-avatar.png" alt="华麦律师" class="author-img" id="author-img">
+                    <em><img src="images/v2.png" class="grade-img"></em>
                 </div>
-                <div class="static">
-                  <span class="up"><i class="up-num">200</i>
-                    <img src="images/zan0_x1.png" alt="华麦律师">
-                    <!-- <img src="images/zan_x1.png" ">-->
+                <div class="author-center">
+                    <p><span class="username">华麦</span>|
+                        <span class="identity">北京华麦法律咨询有限公司</span></p>
+                    <span class="time">2个小时前</span>
+                </div>
+                <div class="author-right">
+                    <!-- 加关注  class='active' display:none-->
+                    <span><em class="focus add-focus">加关注</em></span>
+                    <span><em class="focus  active">已关注</em></span>
+                    <!-- 进圈子 -->
+                    <span><em class="circle add-circle" style="display:none">加关注</em></span>
+                    <span><em class="circle" style="display:none">已关注</em></span>
+                </div>
+            </div>
+            <!-- 文章内容 -->
+            <div class="main">
+                <div class="article-main" >
+                    <p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。</p>
+                    <p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。
+                    </p>
+                    <p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。</p>
+                    <p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。
+                    </p>
+                    <p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。</p>
+                    <p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。
+                    </p>
+                    <p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。</p>
+                    <p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。
+                    </p><p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。</p>
+                    <p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。
+                    </p><p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。</p>
+                    <p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。
+                    </p><p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。</p>
+                    <p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。
+                    </p><p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。</p>
+                    <p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。
+                    </p><p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。</p>
+                    <p>厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。厦门北八道集团因涉嫌多账户、运用杠杆资金巨额操纵多只次新股股票，证监会作出没一罚五的顶格处罚出史上最大的55亿元罚单。
+                    </p>
+                </div>
+                <!-- 收费窗口 -->
+                <div class="money-btn">查看全文</div>
+                <div class="f-l-bottom">
+                    <div class="time">
+                        <span class="reader"><i class="num">200</i>阅读</span>
+                    </div>
+                    <div class="static">
+                 <span class="version" onclick="Version(this)">
+                    版权 |
                   </span>
-                  <span class="up"><i class="up-num">200</i><img src="images/back.png" alt="华麦律师"></span>
+                  <span class="replay " onclick="replay(this)">
+                    投诉
+                  </span>
+                    </div>
                 </div>
-              </div>
-          </div>
+            </div>
         </div>
-      </div>
-    
+        <!-- 推荐文章 -->
+        <div class="other-article">
+            <div class="list-head">
+                <h2>推荐文章</h2>
+            </div>
+            <a class="other-list" href="focus-detail.html">
+                <h3 >地主家也没余粮？昔日“大户”萧山坐等新盘面市|金萍</h3>
+            </a>
+            <a class="other-list" href="focus-detail.html">
+                <h3 >地主家也没余粮？昔日“大户”萧山坐等新盘面市|金萍</h3>
+            </a>
+            <a class="other-list" href="focus-detail.html">
+                <h3 >地主家也没余粮？昔日“大户”萧山坐等新盘面市|金萍</h3>
+            </a>
+        </div>
+        <!-- 评论列表 -->
+        <div class="comment">
+            <div class="list-head">
+                <h2>共有<span class="num" id="commentNum">0</span>条评论</h2>
+            </div>
+            <!-- 评论列表 -->
+            <!-- 0条评论 -->
+            <div class="comment-none">
+                <div class="no-user-comment"  id="noComment">
+                    <img src="images/user_nocontent.png">
+                    <p class="no-comment-word">快来留下你的评语</p>
+                </div>
+            </div>
+            <!-- 有评论 -->
+            <div class="comment-have">
+              
+            </div>
+           <!--  <div class="comment-list" style="display:nne">
+                    <div class="author-left" onclick="updateMember(0)">
+                      <img src="images/no-avatar.png" alt="华麦律师" class="author-img" >
+                        加v图片 -->
+                    <!-- <em><img src="images/v2.png" class="grade-img"></em> -->
+                    <!-- </div>
+                    <div class="author-center">
+                      <span class="author-info">
+                       <i class="author-name">李墨</i>
+                       <i class="author-time">1小时前</i>
+                     </span>
+                    <div class="comment-text">华麦律师</div>
+                    </div>  -->
+            <!-- </div>  -->
+        </div>
+    </div>
+
+     <!-- 底部评论 ，点赞，打赏，分享功能 -->
+     <div class="ft-btn">
+            <div class="btn comment-btn">
+                <div class="comment-content" contenteditable="true" placeholder="写下你的评论"></div>
+            </div>
+            <div class="btn up-btn">
+          <span class="up" onclick="up(this,1)">
+             <img src="images/zan0_x1.png" alt="华麦律师" class="up img">赞
+               <!-- <img src="images/zan_x1.png" ">-->
+             <i class="up-num">200</i>
+         </span>
+            </div>
+            <div class="btn reword-btn">
+          <span class="moneybtn">
+             <img src="images/reward.png" alt="华麦律师" class="reword img">打赏
+         </span>
+            </div>
+            <div class="btn share-btn">
+          <span class="share-btn" >
+             <img src="images/share.png" alt="华麦律师" class="share img">分享
+         </span>
+            </div>
+        </div>
+    </div>
+
+     <!-- 评论 -->
+    <!-- <div class="publishcomment" >
+     <div class="top">
+        <img src="images/top_nav_back.png" alt="华麦律师" class="goback">
+         <h2>评论</h2>
+      </div> -->
+      <!-- <div class="content"> -->
+        <!-- 开始评论 -->
+        <!--   <div class="publishcomment-box">
+            <div class="publishcomment-user-info">
+              <div class="author">
+                  <div class="author-left" onclick="updateMember(0)"><img src="images/no-avatar.png" alt="华麦律师" class="author-img" >
+                   <em><img src="images/v2.png" class="grade-img"></em>
+                  </div>
+                 <div class="author-center">
+                <p><span class="username">华麦</span>|
+                <span class="identity">北京华麦法律咨询有限公司</span></p>
+              </div>
+            </div>
+            <div class="title">证监会开出史上最大罚单！ 北八道这回还能霸道起来吗？</div>
+          <div class="publishcomment-text">
+             <textarea class="pc-main" placeholder="请详细描述您的问题，包括区块链，跨境并购与投资，上市公司的并购重组。如果超过48小时没有专家未回答，支付费用会原路退回给您。"></textarea>
+             <span class="word"><i class="num">0</i>/1000</span>
+          </div>
+       </div>
+    </div>
   </div>
+  <div class="publish"><a href="javascript:void(0)" class="publish-btn">确认发布</a></div> -->
+  <!-- 打赏 -->
+   <!--  <div class="publishcomment pay" style="display:none">
+     <div class="top">
+        <img src="images/nav_icon_back.png" alt="华麦律师" class="goback">
+         <h2>打赏</h2>
+      </div>
+      <div class="head">
+        <img src="images/reward_headbg.png">
+        <div class="expertimg-box">
+          <img src="images/no-avatar.png" alt="华麦律师" class="expert-img" > -->
+            <!-- <em><img src="images/v2.png" class="grade-img"></em> -->
+          <!-- </div>
+      </div>
+      <div class="content"> -->
+         <!-- 开始打赏 -->
+        <!--   <div class="pay-box">
+             <h3>请选择打赏金额：</h3>
+              <div class="money-list"> 
+                 <div class="money-item"> <span><em>1</em>元</span></div>
+                 <div class="money-item two-item selected" > <span><em>2</em>元</span></div>  
+                 <div class="money-item"> <span><em>10</em>元</span></div>  
+                 <div class="money-item"> <span><em>20</em>元</span></div>    
+                 <div class="money-item two-item"> <span><em>50</em>元</span></div>  
+                 <div class="money-item " id="rich-item"> <span>土豪随意</span></div> 
+                
+              </div>-->
+              <!--土豪 -->
+              <!-- <div class="tuhao">
+                 <h3>土豪请随意：</h3>
+                    <input type="text" value="" placeholder="请土豪输入打赏金额" class="rich">
+               </div>
+          </div> -->
+          <!-- 打赏结束 -->
+         <!--    <div class="pay"><a href="javascript:void(0)" class="pay-btn">确认支付</a></div>
+       </div>
+     
+    </div> --> 
+  </div>
+     <!-- 分享提示框 -->
+ <div class="share-prompt-box">
+   <div class="prompt-mask">
+    <div class="circle_share_box">
+       <img src="images/circle_share.png" alt="华麦律师"/>
+    </div>
+     <a href="javascript:void(0)" class="close-btn">
+       <img src="images/circle_share_btn.png" alt="华麦律师"/>
+     </a>
+   </div>
+ </div>
+
+</div>
+</div>
 </body>
-<script>
-  $(".back").click(function(){
-    window.history.back(-1);
-  });
-</script>
+</html>
+
+
+

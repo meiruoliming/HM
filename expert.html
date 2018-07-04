@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>行家</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript"  src="js/resetFontsize.js"></script>
+    <script type="text/javascript"  src="js/jquery-2.1.3.min.js"></script>
+    <link href="css/base.css"  rel="stylesheet"/>
+    <link href="css/common.css"  rel="stylesheet"/>
+    <link href="css/expert.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <!-- 顶部导航开始-->
+    <div class="top">
+        <img src="images/top_nav_back.png" alt="华麦律师" class="back">
+        <h2>行家</h2>
+        <img src="images/top_nav_search.png" alt="华麦律师" class="right-img" id="searchBtn">
+    </div>
+    <div class="head">
+        <ul id="headlists">
+            <li><span>类型</span><img src="images/downmore.png" alt="华麦律师" ></li>
+            <li><span>排序</span><img src="images/downmore.png" alt="华麦律师" ></li>
+        </ul>
+        <!-- 类型弹框-->
+        <div class="type-box" style="display:none">
+            <ul class="type-lists">
+                <li class="type-item"><a href="javascript:void(0)" class="selected">默认1</a></li>
+                <li class="type-item"><a href="javascript:void(0)">民法</a></li>
+                <li class="type-item"><a href="javascript:void(0)">刑法</a></li>
+                <li class="type-item"><a href="javascript:void(0)">经济法</a></li>
+            </ul>
+        </div>
+        <!-- 排序弹窗-->
+        <div class="sort-box" style="display:none">
+            <ul class="sort-lists">
+                <li class="sort-item"><a href="javascript:void(0)" class="selected">默认2</a></li>
+                <li class="sort-item"><a href="javascript:void(0)">最新</a></li>
+                <li class="sort-item"><a href="javascript:void(0)">最热</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 主要内容 -->
+    <div class="content">
+        <!-- 专家列表-->
+        <ul class="expert-lists">
+            <li class="expert-item" onclick="updateMember(0)">
+                <!-- 专家信息-->
+                <div class="expert-item-info">
+                    <div class="expert-item-info-img">
+                        <img src="images/circle_default.jpg" alt="华麦律师"/>
+                        <em><img src="images/v2.png" alt="华麦律师" class="grade-img"/></em>
+                    </div>
+                    <div class="expert-item-info-intl">
+                       <div class="expert-info-title">
+                           <p class="expert-name">华麦</p>
+                           <p class="expert-detail-title">北京华麦法律咨询有限公司 </p>
+                       </div>
+                        <div class="expert-info-detail">
+                            <p>华麦律师平台：联合中国各省市、一带一路海外顶尖律师，打造全球顶尖法律生态共享平台</p>
+                        </div>
+                        <div class="expert-info-tab">
+                            <p>擅长：<span>民法</span><span>刑事</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 其他信息-->
+                <div class="expert-item-other">
+                   <ul>
+                       <li><img src="images/expert_help.png" alt="华麦律师" ><span>已帮助<em>1900</em>人</span></li>
+                       <li><img src="images/expert_hot.png" alt="华麦律师" ><span>本周热度<em>219890</em></span></li>
+                       <li><img src="images/expert_publish.png" alt="华麦律师" ><span>已发布<em>190</em>条观点</span></li>
+                   </ul>
+                </div>
+            </li>
+            <li class="expert-item" onclick="updateMember(0)">
+                <!-- 专家信息-->
+                <div class="expert-item-info">
+                    <div class="expert-item-info-img">
+                        <img src="images/cricle-1.jpeg" alt="华麦律师"/>
+                        <em><img src="images/v2.png" alt="华麦律师" class="grade-img"/></em>
+                    </div>
+                    <div class="expert-item-info-intl">
+                        <div class="expert-info-title">
+                            <p class="expert-name">华麦</p>
+                            <p class="expert-detail-title">北京华麦法律咨询有限公司 </p>
+                        </div>
+                        <div class="expert-info-detail">
+                            <p>华麦律师平台：联合中国各省市、一带一路海外顶尖律师，打造全球顶尖法律生态共享平台</p>
+                        </div>
+                        <div class="expert-info-tab">
+                            <p>擅长：<span>民法</span><span>刑事</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 其他信息-->
+                <div class="expert-item-other">
+                    <ul>
+                        <li><img src="images/expert_help.png" alt="华麦律师" ><span>已帮助<em>1900</em>人</span></li>
+                        <li><img src="images/expert_hot.png" alt="华麦律师" ><span>本周热度<em>219890</em></span></li>
+                        <li><img src="images/expert_publish.png" alt="华麦律师" ><span>已发布<em>190</em>条观点</span></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="expert-item" onclick="updateMember(1)">
+                <!-- 专家信息-->
+                <div class="expert-item-info">
+                    <div class="expert-item-info-img">
+                        <img src="images/one.jpg" alt="华麦律师"/>
+                        <!--<em><img src="images/v2.png" alt="华麦律师" class="grade-img"/></em>-->
+                    </div>
+                    <div class="expert-item-info-intl">
+                        <div class="expert-info-title">
+                            <p class="expert-name">华麦</p>
+                            <p class="expert-detail-title">北京华麦法律咨询有限公司 </p>
+                        </div>
+                        <div class="expert-info-detail">
+                            <p>华麦律师平台：联合中国各省市、一带一路海外顶尖律师，打造全球顶尖法律生态共享平台</p>
+                        </div>
+                        <div class="expert-info-tab">
+                            <p>擅长：<span>民法</span><span>刑事</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 其他信息-->
+                <div class="expert-item-other">
+                    <ul>
+                        <li><img src="images/expert_help.png" alt="华麦律师" ><span>已帮助<em>1900</em>人</span></li>
+                        <li><img src="images/expert_hot.png" alt="华麦律师" ><span>本周热度<em>219890</em></span></li>
+                        <li><img src="images/expert_publish.png" alt="华麦律师" ><span>已发布<em>190</em>条观点</span></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 搜索框-->
+    <div class="search" style="display:none;">
+        <!-- 搜索头部-->
+        <div class="search-top">
+            <img src="images/top_nav_back.png" alt="华麦律师" class="goback">
+            <div class="search-box">
+                <span class="search-icon"> <img src="images/search2.png" alt="华麦律师" ></span>
+                <span class="borderspan"></span>
+                <input type="text"  placeholder="请输入专家名字" maxlength="15"/>
+            </div>
+            <div class="search-bnt">搜索</div>
+        </div>
+        <!-- 搜索选项栏-->
+        <div class="search-content">
+           <h6>专家热搜</h6>
+            <ul class="select-lists">
+                <li class="select-item">华麦律师1</li>
+                <li class="select-item">律师2</li>
+                <li class="select-item">律师3</li>
+                <li class="select-item">华麦4</li>
+                <li class="select-item">华麦律师5</li>
+            </ul>
+        </div>
+    </div >
+</div>
+</body>
+<script type="text/javascript"  src="js/common.js"></script>
+<script type="text/javascript"  src="js/expert.js"></script>
+</html>

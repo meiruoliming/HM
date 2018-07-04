@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>个人资料</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript"  src="js/resetFontsize.js"></script>
+    <script type="text/javascript"  src="js/jquery-2.1.3.min.js"></script>
+    <link href="css/base.css"  rel="stylesheet"/>
+    <link href="css/common.css"  rel="stylesheet"/>
+    <link href="css/personal-info.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+   <div class="personal-info">
+     <!-- 个人资料开始-->
+       <div class="top">
+           <img src="images/top_nav_back.png" alt="华麦律师" class="back">
+           <h2>个人资料</h2>
+       </div>
+       <div class="content">
+         <div class="personal-data">
+           <div class="info-item" onclick="updateImg()">
+             <div class="item-left">头像</div>
+             <div class="item-img">
+               <img src="images/no-avatar.png" alt="华麦律师" class="member-img">
+               <img src="images/icon06.png" alt="华麦律师" class="nav-img">
+             </div>
+           </div>
+           <!-- 头像结束 -->
+            <div class="info-item" onclick="updateInfo(0)">
+             <div class="item-left" >昵称</div>
+             <div class="item-right">
+              <span id="memebrName">12312</span>
+               <img src="images/icon06.png" alt="华麦律师" class="nav-img">
+             </div>
+           </div>
+           <!-- 头像结束 -->
+            <div class="info-item">
+             <div class="item-left">账号</div>
+             <div class="item-right">
+               华麦1231
+             </div>
+           </div>
+           <!-- 头像结束 -->
+         </div>
+         <!-- 其它资料 -->
+         <div class="personal-other">
+           <div class="info-item">
+             <div class="item-left">性别</div>
+             <div class="item-right">
+              <label><input type="radio" name="radiosex" value="" class="sex-btn radioMan" checked>男</label>&nbsp;&nbsp;
+               <label><input type="radio" name="radiosex" value="" class="sex-btn radioWoman">女</label>
+             </div>
+           </div>
+           <!-- 头像结束 -->
+            <div class="info-item" onclick="updateInfo(1)">
+             <div class="item-left">个性签名</div>
+             <div class="item-right">
+               <span id="Signature"></span>
+               <img src="images/icon06.png" alt="华麦律师" class="nav-img">
+             </div>
+           </div>
+           <!-- 头像结束 -->
+            <div class="info-item" onclick="location='personal-info-industry.html'">
+             <div class="item-left">行业</div>
+             <div class="item-right">
+               <!-- <span>全国</span> -->
+               <img src="images/icon06.png" alt="华麦律师" class="nav-img">
+             </div>
+             </div>
+           </div>
+           <!-- 头像结束 -->
+         </div>
+       </div>
+   </div>
+</div>
+</body>
+<script type="text/javascript"  src="js/common.js"></script>
+<script type="text/javascript"  src="js/personal-info.js"></script>
+</html>

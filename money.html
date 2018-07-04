@@ -21,7 +21,7 @@
       <div class="all-money">
         <p class="other-money">未结余额(元)</p>
         <h2>0.00</h2>
-        <a href="javascript:void(0)" class="get-money">提现</a>
+        <a href="javascript:void(0)" class="get-money" style="display:none">提现</a>
       </div>
       <div class="money-ul">
         <ul>
@@ -58,16 +58,37 @@
       <div class="coupon-money">
         <span>优惠劵</span>
         <img src="images/youhuiquan.png" alt="华麦律师" class="left-icon">
-
-         <img src="images/icon06.png" alt="华麦律师" class="right-icon"/>
+        <img src="images/icon06.png" alt="华麦律师" class="right-icon"/>
           <span class="colorp"><em class="num">0</em>张</span>
       </div>
     </div>
-    <div class="fd"></div>
+    <div class="fd">计费规则</div>
   </div>
+  <!-- 计费说明 -->
+  <div class="rule-mask active">
+    <div class="rule-box" id="helptext" style="margin-top:-165.5px;">
+      <h2 class="rule-head">计费规则</h2>
+        <div class="rule-main">
+          <p class="rule rule-1">1、提问者所提出的问题被成功回答后，通过其他第三人的付费收听来获得收入。每被付费收听一次，获得<span id="touListenFee">0.5</span>元；</p>
+          <p class="rule rule-2">2、行家通过回答他人提出的问题来获得收入。每成功回答一条，获得相应金额；</p>
+          <p class="rule rule-3">3、行家通过回答问题被第三人付费收听来获得收入。每被付费收听一次，获得<span id="touListenFee1">0.5</span>元；</p>
+          <p class="rule rule-4">4、若问答被分享，通过分享页面进入付费收听而产生的收益，分享者获得<span id="shareListenShare">0.6</span>元，提问者与回答者均获得<span id="shareListenQA">0.2</span>元；</p>
+      <!--    <p class="fs32 mb10">5、若问答被连续二次分享，通过连续二次分享页面进入且付费收听而产生的收益，二次分享者获得<span id="lv2ShareListenShare">0</span>元，提问者、回答者与一次分享者均获得<span id="lv2ShareListenQA">0</span>元；</p> -->
+          <p class="rule rule-5">5、所有收入扣除<span id="qaFeeRate">10%</span>作为平台佣金。账户余额大于<span id="minPayCash">3</span>元，每日21点系统自动将账户里的余额划到微信钱包内，用户也可前往“问房吧”公众号提现；</p>
+          <p class="rule rule-6">6、备注：免费围观券收听，行家、提问者、分享者都没有收益。</p>
+      </div>
+      <h2 class="ruel rule-ft">知道了</h2>
+    </div>
 </body>
+</html>
 <script>
   $(".back").click(function(){
     window.history.back(-1);
+  });
+  $(".fd").on("click",function(){
+     $(".rule-mask").removeClass("active");
+  });
+   $(".rule-ft").on("click",function(){
+     $(".rule-mask").addClass("active");
   });
 </script>
